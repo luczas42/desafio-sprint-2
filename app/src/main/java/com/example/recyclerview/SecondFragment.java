@@ -49,42 +49,42 @@ public class SecondFragment extends Fragment {
 
     @SuppressLint("SetTextI18n")
     private void checaCampos(CountryCovidData paisSelecionado) {
-        if (paisSelecionado.getCountryText().equals("")) {
+        if (paisSelecionado.getCountryText() == null || paisSelecionado.getCountryText().equals("")) {
             tvNomePais.setText("");
         } else {
             tvNomePais.setText(paisSelecionado.getCountryText());
         }
-        if (paisSelecionado.getActiveCasesText().equals("")) {
+        if (paisSelecionado.getActiveCasesText() == null || paisSelecionado.getActiveCasesText().equals("")) {
             tvCasosAtivos.setText("");
         } else {
             tvCasosAtivos.setText("Casos Ativos: " + paisSelecionado.getActiveCasesText());
         }
-        if (paisSelecionado.getTotalCasesText().equals("")) {
+        if (paisSelecionado.getTotalCasesText() == null || paisSelecionado.getTotalCasesText().equals("")) {
             tvCasosTotal.setText("");
         } else {
             tvCasosTotal.setText("Total de Casos: " + paisSelecionado.getTotalCasesText());
         }
-        if (paisSelecionado.getTotalDeathsText().equals("")) {
+        if (paisSelecionado.getTotalDeathsText()== null || paisSelecionado.getTotalDeathsText().equals("")) {
             tvMortesTotal.setText("");
         } else {
             tvMortesTotal.setText("Total de Mortes: " + paisSelecionado.getTotalDeathsText());
         }
-        if (paisSelecionado.getNewDeathsText().equals("")) {
+        if (paisSelecionado.getNewDeathsText() == null || paisSelecionado.getNewDeathsText().equals("")) {
             tvNovasMortes.setText("");
         } else {
             tvNovasMortes.setText("Novas Mortes: " + paisSelecionado.getNewDeathsText());
         }
-        if (paisSelecionado.getNewCasesText().equals("")) {
+        if (paisSelecionado.getNewCasesText() == null || paisSelecionado.getNewCasesText().equals("")) {
             tvNovosCasos.setText("");
         } else {
             tvNovosCasos.setText("Novos Casos: " + paisSelecionado.getNewCasesText());
         }
-        if (paisSelecionado.getTotalRecoveredText().equals("")) {
+        if (paisSelecionado.getTotalRecoveredText()== null || paisSelecionado.getTotalRecoveredText().equals("")) {
             tvRecuperadosTotal.setText("");
         } else {
             tvRecuperadosTotal.setText("Total de Recuperados: " + paisSelecionado.getTotalRecoveredText());
         }
-        if (paisSelecionado.getLastUpdate().equals("")) {
+        if (paisSelecionado.getLastUpdate() == null || paisSelecionado.getLastUpdate().equals("")) {
             tvDataAtualizacao.setText("");
         } else {
             tvDataAtualizacao.setText("Última Atualizaão: \n" + paisSelecionado.getLastUpdate());
