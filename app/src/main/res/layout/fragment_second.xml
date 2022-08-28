@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondFragment"
-    >
+    tools:context=".SecondFragment">
 
 
     <TextView
@@ -28,32 +27,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:textAlignment="center"
         app:layout_constraintTop_toBottomOf="@+id/tvNomePaisSelecionado"
-        android:textSize="24sp"
         tools:text="Casos Ativos: 23,260" />
 
     <TextView
         android:id="@+id/tvCasosTotal"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        tools:text="Total de Casos: 695,240"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="8dp"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@+id/tvCasosAtivos" />
+        app:layout_constraintEnd_toStartOf="@id/tvMortesTotal"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCasosAtivos"
+        tools:text="Total de Casos: 695,240" />
 
     <TextView
         android:id="@+id/tvMortesTotal"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:gravity="end"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -63,23 +66,28 @@
 
     <TextView
         android:id="@+id/tvNovosCasos"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        tools:text="Novos Casos: 95,240"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="8dp"
+        android:gravity="start"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/tvCasosTotal" />
+        app:layout_constraintEnd_toStartOf="@id/tvNovasMortes"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCasosTotal"
+        tools:text="Novos Casos: 95,240" />
 
     <TextView
         android:id="@+id/tvNovasMortes"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:gravity="end"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -92,10 +100,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvNovasMortes"
-        android:textSize="16sp"
         tools:text="Total de Recuperados: 25,704" />
 
     <TextView
@@ -103,9 +111,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:textSize="16sp"
         tools:text="Última Atualização: 2022-08-19 20:09" />
 </androidx.constraintlayout.widget.ConstraintLayout>

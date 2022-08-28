@@ -11,15 +11,13 @@ import java.util.List;
 
 public class GetCovidDataListFromJson implements GetCountryCovidDataListUseCase {
 
-    private final String TAG = "Get Covida Data List";
-    private final String filePath = "covid_all.json";
-
     public List<CountryCovidData> execute(Context appContext) {
-        String jsonFileString = JsonReader.jsonToString(appContext, filePath);
+        String filePath = "covid_all.json";
+        String jsonFileString = JsonReader.jsonToString(appContext);
+        String TAG = "Get Covida Data List";
         Log.i(TAG, jsonFileString);
         Gson gson = new Gson();
         Type dataType = new TypeToken<List<CountryCovidData>>() { }.getType();
-        List<CountryCovidData> data = gson.fromJson(jsonFileString, dataType);
-        return  data;
+        return gson.fromJson(jsonFileString, dataType);
     }
 }

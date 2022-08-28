@@ -13,13 +13,12 @@ import com.example.recyclerview.R;
 import com.example.recyclerview.RecyclerInterface;
 import com.example.recyclerview.data.CountryCovidData;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class CountryDataAdapter extends RecyclerView.Adapter<CountryDataAdapter.ViewHolder> {
-    private RecyclerInterface recyclerInterface;
-    private Context context;
-    private List<CountryCovidData> dadosLista;
+    private final RecyclerInterface recyclerInterface;
+    private final Context context;
+    private final List<CountryCovidData> dadosLista;
 
     public CountryDataAdapter(Context context, List<CountryCovidData> dadosLista, RecyclerInterface recyclerInterface) {
         this.recyclerInterface = recyclerInterface;
@@ -46,21 +45,18 @@ public class CountryDataAdapter extends RecyclerView.Adapter<CountryDataAdapter.
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView tvNomePais;
+        private final TextView tvNomePais;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvNomePais = itemView.findViewById(R.id.tvNomePais);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (recyclerInterface != null){
-                        int posicao = getAdapterPosition();
-                        CountryCovidData dados = dadosLista.get(posicao);
-                        if (posicao != RecyclerView.NO_POSITION){
-                            recyclerInterface.onItemClick(dados,posicao);
-                        }
+            itemView.setOnClickListener(view -> {
+                if (recyclerInterface != null){
+                    int posicao = getAdapterPosition();
+                    CountryCovidData dados = dadosLista.get(posicao);
+                    if (posicao != RecyclerView.NO_POSITION){
+                        recyclerInterface.onItemClick(dados);
                     }
                 }
             });

@@ -23,23 +23,32 @@ public class FirstFragment extends Fragment implements RecyclerInterface {
 
     @Override
     public View onCreateView(
-            LayoutInflater inflater, ViewGroup container,
+            @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
         binding = FragmentFirstBinding.inflate(inflater, container, false);
-
-        RecyclerView recyclerViewCovid = binding.recyclerViewPaises;
-        List<CountryCovidData> dadosCovid = new GetCovidDataListFromJson().execute(getContext().getApplicationContext());
-        CountryDataAdapter adapter = new CountryDataAdapter(getContext(), dadosCovid, this);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
-        recyclerViewCovid.setLayoutManager(layoutManager);
-        recyclerViewCovid.setAdapter(adapter);
-
+        List<CountryCovidData> dadosCovid = new GetCovidDataListFromJson().execute(requireContext().getApplicationContext());
+        configuraRecyclerView(dadosCovid);
         return binding.getRoot();
     }
 
+    private void configuraRecyclerView(List<CountryCovidData> dadosCovid) {
+        RecyclerView recyclerViewCovid = binding.recyclerViewPaises;
+        configuraAdapter(dadosCovid, recyclerViewCovid);
+        configuraLayout(recyclerViewCovid);
+    }
+
+    private void configuraAdapter(List<CountryCovidData> dadosCovid, RecyclerView recyclerViewCovid) {
+        CountryDataAdapter adapter = new CountryDataAdapter(getContext(), dadosCovid, this);
+        recyclerViewCovid.setAdapter(adapter);
+    }
+
+    private void configuraLayout(RecyclerView recyclerViewCovid) {
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        recyclerViewCovid.setLayoutManager(layoutManager);
+    }
+
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
     }
 
     @Override
@@ -49,11 +58,15 @@ public class FirstFragment extends Fragment implements RecyclerInterface {
     }
 
     @Override
-    public void onItemClick(CountryCovidData data, int posicao) {
+    public void onItemClick(CountryCovidData data) {
         Fragment fragment = new SecondFragment();
         Bundle bundle = new Bundle();
         bundle.putSerializable("paisSelecionado", data);
         fragment.setArguments(bundle);
+        vaiParaSecondFragment(bundle);
+    }
+
+    private void vaiParaSecondFragment(Bundle bundle) {
         NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_SecondFragment, bundle);
     }
 }
