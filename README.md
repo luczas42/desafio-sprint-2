@@ -55,3 +55,10 @@ Questões Escritas
 
 
      É o ramo principal de desenvolvimento, é onde fica a versão mais estável do projeto.
+     
+8. Quais são os comandos usados para atualizar um repositório local e fazer merge de um outro branch ao seu branch ativo? 
+
+
+Atualizar o repositório local: git pull
+    Fazer merge: git merge <nome do branch>
+
