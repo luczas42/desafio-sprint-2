@@ -67,4 +67,8 @@ Atualizar o repositório local: git pull
      
      Git é um software de gerenciamento de versões, já GitHub é uma plataforma que utiliza Git para compartilhamento e desenvolvimento de projetos.
 
+10. Conta pra gente como foi sua experiência na Sprint#02 do programa de bolsa @Android e quais suas expectativas a partir de agora:
+   
+     
+     Minha experiência nessa segunda Sprint foi semelhante à primeira, por contar principalmente com muito estudo nos cursos da Alura, porém a grande diferença que a deixou mais interessante foi a inclusão do desafio, que trouxe além da oportunidade de botar em prática o que foi aprendido, também apresentou a possibilidade de agregar novos conhecimentos. Tendo isso em mente tenho altas expectativas para desenvolver mais projetos daqui pra frente.
 
