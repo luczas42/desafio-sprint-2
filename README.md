@@ -50,3 +50,8 @@ Questões Escritas
      
      
      O comando é git add.
+     
+7. O que é a Branch master e para que serve? 
+
+
+     É o ramo principal de desenvolvimento, é onde fica a versão mais estável do projeto.
