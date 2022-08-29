@@ -45,3 +45,8 @@ Questões Escritas
 
 
     O comando é git init.
+
+6. Com o Git Você pode propor mudanças (adicioná-las ao Index) usando um comando. Qual é esse comando? 
+     
+     
+     O comando é git add.
