@@ -61,4 +61,10 @@ Questões Escritas
 
 Atualizar o repositório local: git pull
     Fazer merge: git merge <nome do branch>
+     
+9. Qual a diferença entre git e github? 
+
+     
+     Git é um software de gerenciamento de versões, já GitHub é uma plataforma que utiliza Git para compartilhamento e desenvolvimento de projetos.
+
 
