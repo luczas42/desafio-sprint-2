@@ -35,3 +35,8 @@ Questões Escritas
 
 
      É o representante do cliente dentro da equipe.
+
+4. O que é Git?
+
+
+     É um sistema de controle de versão de arquivos que facilita o trabalho em conjunto.
