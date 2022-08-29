@@ -30,3 +30,8 @@ Questões Escritas
 
 
      O scrum é dividido em ciclos chamados de Sprint, que ocorre em fases, tendo início com a Sprint Planning Meeting, uma reunião de planejamento da Sprint; durante o processo ocorrem curtas reuniões diárias chamadas Daily Scrum, onde cada membro da equipe fala o que fez, o que pretende fazer e seus impedimentos; ao fim da Sprint se dá a Sprint Review Meeting, onde é revisado o que foi produzido e por fim ocorre a Sprint Retrospective, onde é avaliado o que foi positivo, negativo e o que pode vir a melhorar referente ao ciclo atual.
+
+3. O que é um scrum Product Owner? 
+
+
+     É o representante do cliente dentro da equipe.
