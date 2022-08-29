@@ -19,3 +19,9 @@ Requisitos :
 
 Bonus :
 - Usar databinding https://developer.android.com/topic/libraries/data-binding
+
+Questões Escritas 
+1. Para que serve o método Scrum?
+
+
+     Scrum é uma metodologia ágil para gerenciamento de projetos complexos, possibilita que o tempo de entrega seja menor e que sejam feitas adaptações com mais facilidade no projeto.
