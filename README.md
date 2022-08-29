@@ -40,3 +40,8 @@ Questões Escritas
 
 
      É um sistema de controle de versão de arquivos que facilita o trabalho em conjunto.
+
+5. Qual o comando para criação de um novo repositório no Git? 
+
+
+    O comando é git init.
